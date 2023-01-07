@@ -6,6 +6,7 @@ import lombok.ToString;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
@@ -13,7 +14,7 @@ import java.util.Objects;
 @Setter
 @ToString
 @Table(name = "seller_info")
-public class SellerInfo {
+public class SellerInfo implements Serializable {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-@Setter
 @AllArgsConstructor
 public enum SuccessCode {
     SUCCESS("SC_KM_001", "success")

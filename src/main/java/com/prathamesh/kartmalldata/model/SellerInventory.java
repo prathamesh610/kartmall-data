@@ -10,6 +10,7 @@ import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
@@ -17,7 +18,7 @@ import java.util.Objects;
 @Setter
 @ToString
 @Table(name = "seller_inventory")
-public class SellerInventory {
+public class SellerInventory implements Serializable {
 
     @EmbeddedId
     private SellerIdProductIdEntity sellerIdProductIdEntity;

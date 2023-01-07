@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Getter
@@ -13,7 +14,7 @@ import javax.persistence.*;
 @ToString
 @EqualsAndHashCode
 @Table(name = "product_images")
-public class ProductImages {
+public class ProductImages implements Serializable {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
